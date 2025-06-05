@@ -1,0 +1,103 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.img-container {
+  margin-top: 60px; 
+  width: 100vw; 
+  overflow: hidden;
+  padding: 0;
+}
+
+.img-container img {
+  display: block;
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.img-container {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.img-container img {
+  width: 100vw;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  font-size: 2rem;
+  
+
+}
+
+
+
+.card {
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  max-width: 35%;
+  max-height: 35%;
+}
+
+.red-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* de helft van het plaatje */
+  height: 100%;
+  background-color: red;
+  z-index: 1;
+  pointer-events: none;
+  
+  clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
+}
+
+.img-text {
+  z-index: 2; /* zorg dat de tekst boven de overlay komt */
+}
+button{
+  background-color: red;
+  color: white;
+  
+}
+
+.content{  
+  background-color: rgb(248, 247, 247);
+}
+.content{
+  display: flex;
+  justify-content: center;
+
+}
+.ontdek1efoto img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 20px auto; /* centreert het plaatje */
+  border-radius: 10px; /* optioneel: afgeronde hoeken */
+}
