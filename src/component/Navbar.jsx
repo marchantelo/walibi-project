@@ -15,7 +15,7 @@ function Navbar() {
                         />
                     </Link>
                 </li>
-                <li><Link to="/Contact">ontdek het park</Link></li>
+                <li><Link to="/Contact">ontdwek het park</Link></li>
             </ul>
          
         </nav>
