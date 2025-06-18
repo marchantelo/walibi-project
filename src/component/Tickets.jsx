@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styleHome/Home.module.css';
 
-function Home() {
+function Tickets() {
   return (
     <div>
       <div className={styles.imgContainer}>
@@ -34,4 +34,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Tickets;

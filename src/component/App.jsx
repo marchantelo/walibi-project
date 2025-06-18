@@ -1,12 +1,13 @@
 // src/component/App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "../styles/App.css";
+import styles from '../styleHome/Home.module.css';
 
 import Navbar from "./navbar";      
 import Home from "./Home";          
-import Contact from "./Contact";
+import Ontdek from "./Ontdek";
 import Boeken from "./Boeken";
+import Attractie from "./Attractie";
 
 
 function App() {
@@ -15,8 +16,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/Home" element={<Home />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Ontdek" element={<Ontdek />} />
         <Route path="/Boeken" element={<Boeken />} />
+        <Route path="/Attractie" element={<Attractie />} />
         
         {/* Voeg hier meer routes toe */}
       </Routes>

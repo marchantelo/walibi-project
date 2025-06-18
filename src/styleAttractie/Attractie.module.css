@@ -1,0 +1,130 @@
+/* Zorg dat er geen ongewenste horizontale scroll is */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+  
+.redOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  z-index: 1;
+  clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
+}
+
+.imgText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.imgContainer {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.imgContainer img {
+  width: 100vw;
+  object-fit: cover;
+  
+}
+
+
+.alleAttracties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  gap: 20px; /* ruimte tussen de kaarten */
+}
+.cardContent {
+  width: calc(33.333% - 20px);
+  height: 400px; 
+  background-color: white;
+  border: 1px solid #0c0c0c;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.cardContent img {
+  width: 100%;
+  height: 60%;          
+  object-fit: cover;     
+  display: block;
+
+}
+.cardText {
+  height: 30%;         
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
+.cardContent:hover{
+  transform: scale(0.9);
+  transition: transform 0.3s ease; /* duur 0.3 seconden, met een ‘ease’ timing */
+}
+
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 200px;
+}
+
+input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  background: #e0e4ea;
+  height: 4px;
+  border-radius: 10px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #7f8fa6;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.value-bubble {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #7f8fa6;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  z-index: 1;
+}
