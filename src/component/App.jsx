@@ -8,6 +8,7 @@ import Home from "./Home";
 import Ontdek from "./Ontdek";
 import Boeken from "./Boeken";
 import Attractie from "./Attractie";
+import Tickets from "./Tickets";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Ontdek" element={<Ontdek />} />
         <Route path="/Boeken" element={<Boeken />} />
         <Route path="/Attractie" element={<Attractie />} />
+        <Route path="/Tickets" element = {<Tickets />} />
         
         {/* Voeg hier meer routes toe */}
       </Routes>

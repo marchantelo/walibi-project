@@ -1,38 +1,112 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e0e0e0;
+}
+
 .contactForm {
-    max-width: 600px;
-    margin: 50px auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contactForm label {
+  font-weight: bold;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: darkred;
+}
+
+
+.redOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  z-index: 1;
+  clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
+}
+
+.imgContainer {
+  position: relative;
+  margin-top: 60px;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.imgContainer img {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+}
+
+.imgText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.betaalMethodes img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .betaalMethodes {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    background-color: #f3f3f3;
-    border-radius: 10px;
+    width: 100%;
   }
-  
-  .contactForm label {
-    font-weight: bold;
-  }
-  
-  .contactForm input,
-  .contactForm textarea {
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 12px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: darkred;
-  }
-  
+}
+
+
+.betaalMethodes {
+  display: flex;
+
+  justify-content: space-between
+}

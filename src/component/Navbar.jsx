@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className={styles.navbar}>
+<nav className={styles.navbar}>
       <ul>
         <li>
           <Link to="/Home">
@@ -18,9 +18,11 @@ function Navbar() {
         <li><Link to="/Ontdek">Ontdek het park</Link></li>
       </ul>
 
-      <div className={styles.ticketsButton}>
-       <button>koop je Tickets</button>
-      </div>
+      <Link to="/Tickets">
+        <div className={styles.ticketsButton}>
+          <button>koop je Tickets</button>
+        </div>
+      </Link>
     </nav>
   );
 }

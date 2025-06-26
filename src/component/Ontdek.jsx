@@ -30,8 +30,9 @@ function Ontdek() {
             Walibi Holland heeft voor iedereen spectaculaire attracties voor het perfecte dagje uit!
           </h4>
 
-
-          <button className={styles.ticketButton}>Koop je tickets</button>
+          <Link to="/Tickets">
+            <button className={styles.ticketButton}>Koop je tickets</button>
+          </Link>
         </div>
 
         <div className={styles.ontdekFoto}>
