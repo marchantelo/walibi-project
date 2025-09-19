@@ -81,6 +81,12 @@ function Ontdek() {
           ))}
         </div>
       </div>
+            <footer className={styles.footer}>
+              <p>&copy; {new Date().getFullYear()} Walibi Holland | Volg ons op 
+                <a href="https://www.facebook.com/walibiholland" target="_blank" rel="noopener noreferrer"> Facebook</a> &amp; 
+                <a href="https://www.instagram.com/walibiholland/" target="_blank" rel="noopener noreferrer"> Instagram</a>
+              </p>
+            </footer>
     </div>
   );
 }

@@ -43,8 +43,7 @@
 
 .content {
   display: flex;
-  background-color: rgb(220, 218, 218);
-  
+  background-color: rgb(234, 233, 233);
   padding: 20px;
 }
 
@@ -80,6 +79,7 @@
 }
 
 .kaartInfo, .kaartInfo2 {
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,12 +88,33 @@
 }
 
 .kaartInfo2 {
-  background-color: rgb(248, 247, 247);
+  background-color: rgb(234, 233, 233);
+  border-radius: 15px;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 1450px) {
+  .kaartInfo,  .kaartInfo2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kaartText {
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .attractieCards {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .kaartText {
   max-width: 30%;
+  color: black;
 }
 
 .kaartInfo img {
@@ -130,4 +151,18 @@
 .alleAttracties{
   background-color: red;
   color: white;
+}
+
+.cottagesSection{
+  display: flex;
+  align-items: center;
+  flex-direction: column;                                                                                 
+}
+.footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  background: #e2001a;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
 }

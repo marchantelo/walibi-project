@@ -36,17 +36,17 @@ function Boeken() {
 
           <label htmlFor="phone">betaalmethode:</label>
 
-          
+
           <div className={styles.betaalMethodes} >
             <div id='Ideal'>
               <p>Ideal</p>
               <img src="https://creditexpo-nl-space.ams3.digitaloceanspaces.com/wp-content/uploads/2014/06/15165437/ideal.png"></img>
             </div>
-            <div id= 'Paypal'>
+            <div id='Paypal'>
               <p>Paypal</p>
               <img src="https://play-lh.googleusercontent.com/iQ8f5plIFy9rrY46Q2TNRwq_8nCvh9LZVwytqMBpOEcfnIU3vTkICQ6L1-RInWS93oQg"></img>
             </div>
-            <div id = 'Kortingsbon'>
+            <div id='Kortingsbon'>
               <p>Kortingscodes</p>
               <img src='https://www.parkplanner.nl/wp-content/uploads/2025/04/Walibi-korting-2025.webp'></img>
             </div>
@@ -60,6 +60,12 @@ function Boeken() {
           <button type="submit" className={styles.button}>Verstuur</button>
         </form>
       </div>
+      <footer className={styles.footer}>
+        <p>&copy; {new Date().getFullYear()} Walibi Holland | Volg ons op
+          <a href="https://www.facebook.com/walibiholland" target="_blank" rel="noopener noreferrer"> Facebook</a> &amp;
+          <a href="https://www.instagram.com/walibiholland/" target="_blank" rel="noopener noreferrer"> Instagram</a>
+        </p>
+      </footer>
 
     </div>
   );

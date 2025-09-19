@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   gap: 15px;
   padding: 20px;
-  background-color: #f3f3f3;
+  background-color: black;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -88,6 +88,16 @@ body {
   z-index: 2;
 }
 
+input[type="submit"] {
+  background-color: red;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 .betaalMethodes img {
   width: 150px;
   height: 100px;
@@ -107,6 +117,10 @@ body {
 
 .betaalMethodes {
   display: flex;
+justify-content: center;
+ justify-content: space-between;
+ ;
 
-  justify-content: space-between
 }
+
+

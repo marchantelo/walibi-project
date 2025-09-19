@@ -10,30 +10,10 @@ function Tickets() {
     const handleAantalChange = (event) => {
         const value = event.target.value;
         setTicketAantal(value);
-        console.log("Aantal tickets:", value);
     };
 
     const handleDateChange = (event) => {
-        const dateStr = event.target.value;
-        setSelectedDate(dateStr);
-
-        const dateObj = new Date(dateStr);
-        const dagIndex = dateObj.getDay(); 
-        console.log(dagIndex);
-
-        const dagenVanDeWeek = [
-            "zondag",
-            "maandag",
-            "dinsdag",
-            "woensdag",
-            "donderdag",
-            "vrijdag",
-            "zaterdag"
-        ];
-
-        const dagNaam = dagenVanDeWeek[dagIndex];
-
-        console.log("Geselecteerde dag van de week:", dagNaam);
+        setSelectedDate(event.target.value);
     };
 
     const handleBestel = () => {
@@ -50,13 +30,10 @@ function Tickets() {
 
     const berekenTotaalPrijs = () => {
         const aantal = parseInt(ticketAantal) || 0;
-
         const dateObj = new Date(selectedDate);
         const dagIndex = dateObj.getDay();
-
         const isWeekend = (dagIndex === 0 || dagIndex === 6);
         const prijsPerTicket = isWeekend ? 40 : 35;
-
         return aantal * prijsPerTicket;
     };
 
@@ -64,7 +41,6 @@ function Tickets() {
 
     return (
         <div>
-            
             <div className={styles.imgContainer}>
                 <img
                     src="https://ikbenboa.nl/wp-content/uploads/2024/07/Walibi.jpg"
@@ -72,8 +48,8 @@ function Tickets() {
                 />
                 <div className={styles.redOverlay}></div>
                 <div className={styles.imgText}>
-                    <h1>Welkom bij Walibi!</h1>
-                    <p>Beleef een onvergetelijk avontuur</p>
+                    <h1>Tickets bestellen</h1>
+                    <p>Reserveer eenvoudig jouw tickets voor Walibi Holland!</p>
                 </div>
             </div>
 
@@ -81,30 +57,53 @@ function Tickets() {
                 <div className={styles.cardContent}>
                     <h1 className={styles.cardTitle}>Tickets op datum</h1>
                     <div className={styles.cardText}>
-                        <h3> 📅 Kies jouw favoriete dag...</h3>
-                        <h3> 👪  Extra korting voor families...</h3>
-                        <h3> 🧒 Kinderen t/m 2 jaar gratis toegang...</h3>
-
+                        <h3>📅 Kies jouw favoriete dag</h3>
+                        <h3>👪 Extra korting voor families</h3>
+                        <h3>🧒 Kinderen t/m 2 jaar gratis toegang</h3>
                         <div className={styles.visitInformation}>
+                            <label htmlFor="datum">Datum bezoek:</label>
                             <input
                                 type="date"
+                                id="datum"
                                 value={selectedDate}
                                 onChange={handleDateChange}
                             />
-                            <div id="hoeveelheid">
-                                <input
-                                    type="number"
-                                    value={ticketAantal}
-                                    onChange={handleAantalChange}
-                                    min="1"
-                                />
-                            </div>
-                            <p>totaalprijs : {totaalprijs} euro.</p>
+                            <label htmlFor="hoeveelheid">Aantal tickets:</label>
+                            <input
+                                type="number"
+                                id="hoeveelheid"
+                                value={ticketAantal}
+                                onChange={handleAantalChange}
+                                min="1"
+                                placeholder="Aantal"
+                            />
+                            <p>Totaalprijs: <strong>{totaalprijs} euro</strong></p>
                         </div>
-                        <button onClick={handleBestel} className={styles.cardButton}>bestel</button>
+                        <button onClick={handleBestel} className={styles.cardButton}>Bestel tickets</button>
                     </div>
                 </div>
             </div>
+
+            <section className={styles.ticketInfo}>
+                <h2>Ticketvoorwaarden</h2>
+                <ul>
+                    <li>Tickets zijn alleen geldig op de gekozen datum.</li>
+                    <li>Kinderen t/m 2 jaar gratis toegang (geen ticket nodig).</li>
+                    <li>Groepen vanaf 10 personen ontvangen extra korting.</li>
+                    <li>Tickets kunnen niet worden geruild of terugbetaald.</li>
+                </ul>
+            </section>
+
+            <section className={styles.contactSection}>
+                <h2>Vragen over tickets?</h2>
+                <p>
+                    Neem contact op via <a href="mailto:tickets@walibi.nl">tickets@walibi.nl</a> of bel 0321-123456.
+                </p>
+            </section>
+
+            <footer className={styles.footer}>
+                <p>&copy; {new Date().getFullYear()} Walibi Holland | Tickets & Info</p>
+            </footer>
         </div>
     );
 }

@@ -9,6 +9,7 @@ import Ontdek from "./Ontdek";
 import Boeken from "./Boeken";
 import Attractie from "./Attractie";
 import Tickets from "./Tickets";
+import Walibivillige from "./Walibivillage";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/Home" element={<Home />} />
+        <Route path="Walibivillage" element={<Walibivillige/>} />
         <Route path="/Ontdek" element={<Ontdek />} />
         <Route path="/Boeken" element={<Boeken />} />
         <Route path="/Attractie" element={<Attractie />} />

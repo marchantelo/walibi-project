@@ -40,7 +40,7 @@
 
 
 
-.ticketsButton button {
+.ticketsButton{
   padding: 8px 12px;
   background-color: #eb1010;
   color: white;
@@ -50,6 +50,14 @@
   margin-left: auto;
   margin-right: 80px; 
 
+}
+
+.navLinks {
+  display: flex;
+  gap: 30px; 
+  padding: 0;
+  margin: 0;
+  align-items: center;
 }
 
 
